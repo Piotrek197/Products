@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+        <section id="top">
+            <h2>Add Product</h2>
+            <div class="buttons">
+                <button onclick="handleSave()">Save</button>
+                <a href="/">Cancel</a>
+            </div>
+        </section>
+        <section id="product-details">
+            <form action="" id="product-form">
+                <div class="input">
+                    <label for="sku">SKU</label>
+                    <input type="text" name="product-sku" id="sku" autocomplete="off">
+                </div>
+               <div class="input">
+                    <label for="name">Name</label>
+                    <input type="text" name="product-name" id="name" autocomplete="off">
+               </div>
+               <div class="input">
+                    <label for="price">Price</label>
+                    <input type="text" name="product-price" id="price" autocomplete="off">
+               </div>
+                <div class="input">
+                    <label for="switcher">Unit Switcher</label>
+                    <select name="unit-switcher" id="switcher">
+                        <option value="mb">MB</option>
+                        <option value="dimension">Cubic</option>
+                        <option value="weight">Weight</option>
+                    </select>
+                </div>
+                
+                <div class="input" data-type="mb">
+                    <label for="size-mb">Size (MB)</label>
+                    <input type="text" name="size-mb" id="size-mb" autocomplete="off">
+                    <p> * Please, provide size in megabytes, e.g. 700</p>
+                </div>
+                <div class="input not-visible" data-type="dimension">
+                    <label for="height-cm">Height (CM)</label>
+                    <input type="text" name="height-cm" id="height-cm" autocomplete="off">
+                </div>
+                <div class="input not-visible" data-type="dimension">
+                    <label for="width-cm">Width (CM)</label>
+                    <input type="text" name="width-cm" id="width-cm" autocomplete="off">
+                </div>
+                <div class="input not-visible" data-type="dimension">
+                    <label for="length-cm">Length (CM)</label>
+                    <input type="text" name="length-cm" id="length-cm" autocomplete="off">
+                    <p> * Please, provide dimensions in centimeters</p>
+                </div>
+                <div class="input not-visible" data-type="weight">
+                    <label for="weight-kg">Weight (KG)</label>
+                    <input type="text" name="weight-kg" id="weight-kg" autocomplete="off">
+                    <p> * Please, provide weight in kilograms,  e.g. 20</p>
+                </div>
+                <div id="error-message"></div>
+            </form>
+        </section>
+        <footer>
+        Test Assignment
+        </footer>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

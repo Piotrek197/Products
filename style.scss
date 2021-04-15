@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html,
+body {
+  //width: 100vw;
+  height: 100vh;
+}
+#container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+#top {
+  display: flex;
+  justify-content: space-between;
+  padding: 6vh 0 4vh;
+  color: #c0445f;
+  border-bottom: 2px #c0445f solid;
+  h2 {
+    font-size: 24px;
+  }
+  .buttons {
+    display: inline-block;
+    a,
+    button {
+      background: #c0445f;
+      color: white;
+      border: none;
+      border-radius: 2px;
+      padding: 0.6em;
+      font-size: 15px;
+      outline: none;
+      cursor: pointer;
+      box-shadow: 2px 2px 0 2px darken(#c0445f, 20%);
+    }
+    button:hover,
+    button:focus,
+    a:hover,
+    a:focus {
+      background: darken(#c0445f, 20%);
+      transform: scale(0.95);
+    }
+    a {
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+}
+
+#products {
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .single-product {
+    width: 300px;
+    height: 300px;
+    border: 1px #c0445f solid;
+    margin: 20px;
+    position: relative;
+    .checkbox {
+      margin: 1.5em;
+      width: 30px;
+      height: 30px;
+    }
+    .product-info {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+}
+
+#product-details {
+  color: #c0445f;
+  font-weight: 550;
+  margin: 20vh 0;
+  width: 100%;
+  #product-form {
+    width: 40%;
+    margin: auto;
+    .input {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px 0;
+      input,
+      select {
+        padding: 0.3em;
+      }
+      p {
+        padding: 1em;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 2vh;
+  border-top: 2px #c0445f solid;
+}
+
+.not-visible {
+  display: none !important;
+}
+
+@media (max-width: 800px) {
+  #top h2 {
+    font-size: 20px;
+  }
+  #top .buttons {
+    button,
+    a {
+      font-size: 12px;
+    }
+  }
+  #product-details {
+    width: 100%;
+    margin: 7vh 0;
+    #product-form {
+      width: 100%;
+    }
+  }
+}
